@@ -12,6 +12,7 @@ First step branch contains the first step.
 -- Clear is ment to clear the screen completely
 -- Step is ment to do a single iteration
 -- Run is ment to do run several iterations until stopped
+
 ###second-step
 Second step branch is extending view and painting grid.
 - The grid is dynamically calculated based on X_PIXEL_STEP and Y_PIXEL_STEP in Grid.class. These two constants can be parameterized later on to enable user to decide grid-sizes and/or number of "cells" (squares) in the view.
