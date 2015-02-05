@@ -35,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:onClick="stepGameOfLife"/>
 
-    <ImageView
+    <no.curiosity.gameoflife.vews.GridView
         android:id="@+id/viewGrids"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
