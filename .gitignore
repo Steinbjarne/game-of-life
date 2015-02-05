@@ -1,5 +1,5 @@
 .gradle
-.iml
+game-of-life.iml
 /local.properties
 /.idea
 /.idea/workspace.xml
