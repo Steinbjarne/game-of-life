@@ -61,6 +61,11 @@ public class GridView extends ImageView {
         return true;
     }
 
+    public void clearGrid() {
+        Grid.clearRectangulars();
+        invalidate();
+    }
+
     private boolean shouldUpdateGrid() {
         return xFrame > -1 && yFrame > -1
                 && xFrame <= Grid.calcNumberOfXGrids(getWidth())
