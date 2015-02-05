@@ -18,25 +18,6 @@ public class GameOfLife extends ActionBarActivity {
 
         setContentView(R.layout.activity_game_of_life);
         gridView = (GridView) findViewById(R.id.viewGrids);
-
-        getSupportActionBar().hide();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_game_of_life, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void clearView(View view) {

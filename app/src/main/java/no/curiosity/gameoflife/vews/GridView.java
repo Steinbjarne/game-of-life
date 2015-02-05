@@ -59,10 +59,6 @@ public class GridView extends ImageView {
         }
     }
 
-    public GridView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         MotionEvent.PointerCoords pointClicked = new MotionEvent.PointerCoords();
