@@ -1,4 +1,4 @@
-# game-of-life
+# Conway's Game of Life
 Demo-app for Android application to demonstrate Conway's Game of Life algorithm
 
 ##Branches
