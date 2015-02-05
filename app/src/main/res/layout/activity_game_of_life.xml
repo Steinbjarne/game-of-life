@@ -14,8 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="runGameOfLife" />
+        android:layout_alignParentEnd="true"/>
 
     <Button
         android:id="@+id/btnClear"
@@ -23,8 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/btnRun"
-        android:layout_alignParentStart="true"
-        android:onClick="clearView" />
+        android:layout_alignParentStart="true"/>
 
     <Button
         android:id="@+id/btnStep"
@@ -32,10 +30,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="stepGameOfLife"/>
+        android:layout_centerHorizontal="true"/>
 
-    <ImageView
+    <no.curiosity.gameoflife.views.GridView
         android:id="@+id/viewGrids"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
