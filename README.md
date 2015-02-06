@@ -26,3 +26,11 @@ Third step branch is enabling the GridView to paint and clear cells
 - User can click on blank cell to paint it; a.k.a. mark it as "alive"
 - User can click on "live" cell to mark it as "dead"
 - Activate button for clearing the entire grid
+
+###fourth-step
+Fourth step branch is where we create the algorithm and enable Step- and Run buttons
+- Enabling Step button
+- Creating the algorithm for running a single step
+- Setting mode the application is running in
+- Enabling Run button
+- Swapping between Run and Step
