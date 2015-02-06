@@ -13,6 +13,7 @@ public class GridView extends ImageView {
     private float xFrame = 0;
     private float yFrame = 0;
     private boolean doDraw = false;
+    int animation = Grid.ANIM_NONE;
 
     public GridView(Context context) {
         super(context);
@@ -37,8 +38,22 @@ public class GridView extends ImageView {
         }
 
         if (doDraw) {
-            Grid.updateRectangulars(canvas, xFrame, yFrame);
+            Grid.updateRectangulars(canvas, xFrame, yFrame, animation);
             doDraw = false;
+        }
+
+        if (animation == Grid.ANIM_SINGLE_STEP) {
+            animation = Grid.ANIM_NONE;
+        }
+
+        if (animation == Grid.ANIM_MULTI_STEP) {
+            stepGameOfLife();
+            try {
+                Thread.sleep(250);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -63,6 +78,26 @@ public class GridView extends ImageView {
 
     public void clearGrid() {
         Grid.clearRectangulars();
+        invalidate();
+    }
+
+    public void runGameOfLife() {
+        if (animation == Grid.ANIM_NONE) {
+            animation = Grid.ANIM_MULTI_STEP;
+        }
+        else {
+            animation = Grid.ANIM_NONE;
+        }
+
+        invalidate();
+    }
+
+    public void stepGameOfLife() {
+        doDraw = true;
+        if (animation == Grid.ANIM_NONE) {
+            animation = Grid.ANIM_SINGLE_STEP;
+        }
+        Grid.doOneStep();
         invalidate();
     }
 
