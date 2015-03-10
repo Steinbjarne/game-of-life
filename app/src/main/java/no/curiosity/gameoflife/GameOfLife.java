@@ -30,25 +30,20 @@ public class GameOfLife extends ActionBarActivity {
     }
 
     public void runGameOfLife(View view) {
-        GridView gridView = (GridView) findViewById(R.id.viewGrids);
-        Button run = (Button) findViewById(R.id.btnRun);
-        Button clear = (Button) findViewById(R.id.btnClear);
-        Button step = (Button) findViewById(R.id.btnStep);
-        if (run.getText().equals("Run")) {
-            run.setText("Stop");
-            clear.setEnabled(false);
-            step.setEnabled(false);
+        if (btnRun.getText().equals("Run")) {
+            btnRun.setText("Stop");
+            btnClear.setEnabled(false);
+            btnStep.setEnabled(false);
         }
         else {
-            run.setText("Run");
-            clear.setEnabled(true);
-            step.setEnabled(true);
+            btnRun.setText("Run");
+            btnClear.setEnabled(true);
+            btnStep.setEnabled(true);
         }
         gridView.runGameOfLife();
     }
 
     public void stepGameOfLife(View view) {
-        GridView gridView = (GridView) findViewById(R.id.viewGrids);
         gridView.stepGameOfLife();
     }
 }
